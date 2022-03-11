@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "182172FA-ADCD-4CD1-BA45-093201A88CD9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CCECD18-7189-4BB3-97B4-EBE8FAA64923"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICatalog/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "setupConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICatalog/CustomCellUITable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "subMenuTable"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A - e399ff0202c51974"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UITableView in variable initialization expression of UICatalog.CustomCellUITable.subMenuTable : __C.UITableView"
+                  moduleName = "UICatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishekkumar/Desktop/Git/UICatalog/UICatalog/CustomCellUITable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A - ddfce80488a72f21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UICatalog.CustomCellUITable.subMenuTable.getter : __C.UITableView"
+                  moduleName = "UICatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishekkumar/Desktop/Git/UICatalog/UICatalog/CustomCellUITable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A - cf987285d80feb05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UICatalog.CustomCellUITable.subMenuTable.setter : __C.UITableView"
+                  moduleName = "UICatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishekkumar/Desktop/Git/UICatalog/UICatalog/CustomCellUITable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A - 5fc3c6629913cc49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UICatalog.CustomCellUITable.subMenuTable.modify : __C.UITableView"
+                  moduleName = "UICatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishekkumar/Desktop/Git/UICatalog/UICatalog/CustomCellUITable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A - af9efe39e543923b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UICatalog.CustomCellUITable.subMenuTable.modify : __C.UITableView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "UICatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishekkumar/Desktop/Git/UICatalog/UICatalog/CustomCellUITable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A - e74836a1aabcf92e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UICatalog.CustomCellUITable.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; UICatalog.CustomCellUITable"
+                  moduleName = "UICatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishekkumar/Desktop/Git/UICatalog/UICatalog/CustomCellUITable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "1320">
+               </Location>
+               <Location
+                  uuid = "48B77444-596B-4AB1-8216-4D63D56A5B2A - ca4f87b4b892b492"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UICatalog.CustomCellUITable.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;UICatalog.CustomCellUITable&gt;"
+                  moduleName = "UICatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishekkumar/Desktop/Git/UICatalog/UICatalog/CustomCellUITable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "1296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FBF74B1-895D-4BF9-B1C0-3E5F3A17F91C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICatalog/CustomCellUITable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D2FD545-10C8-46C1-ADAD-B98AF13D62D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICatalog/CustomCellUITable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C6C4FCE-079C-4610-BDD8-0295CFF38E99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICatalog/CustomCellUITable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56FC1046-548D-4451-9F44-87E3B93173FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICatalog/ContentViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "headerHandler(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
