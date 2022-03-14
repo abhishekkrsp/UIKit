@@ -10,17 +10,14 @@ import UIKit
 
 class CustomCellUITable: UITableViewCell, UITableViewDelegate, UITableViewDataSource {
     var dataArr: [IHeader] = []
-    var subMenuTable: UITableView = {
-        let someInnerView = UITableView()
+
+    var subMenuTable: AutoSizingTableView = {
+        let someInnerView = AutoSizingTableView()
         someInnerView.translatesAutoresizingMaskIntoConstraints = false
         someInnerView.separatorStyle = .none
         someInnerView.isScrollEnabled = false
         return someInnerView
     }()
-    override func layoutSubviews() {
-          super.layoutSubviews()
-        subMenuTable.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width-5, height: self.bounds.size.height-5)
-      }
     
     func setupUI() {
         contentView.addSubview(subMenuTable)
@@ -28,18 +25,14 @@ class CustomCellUITable: UITableViewCell, UITableViewDelegate, UITableViewDataSo
     func setupConstraints() {
         let superviewMargin = contentView.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 132),
             subMenuTable.topAnchor.constraint(equalTo:superviewMargin.topAnchor),
             subMenuTable.bottomAnchor.constraint(equalTo:superviewMargin.bottomAnchor),
             subMenuTable.leadingAnchor.constraint(equalTo:superviewMargin.leadingAnchor, constant: 20),
             subMenuTable.trailingAnchor.constraint(equalTo:superviewMargin.trailingAnchor)
         ])
-        
     }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        print(contentView.frame.height)
-
         setupUI()
         setupConstraints()
         subMenuTable.register(UITableViewCell.self, forCellReuseIdentifier: "subMenu")
@@ -47,6 +40,7 @@ class CustomCellUITable: UITableViewCell, UITableViewDelegate, UITableViewDataSo
                 forHeaderFooterViewReuseIdentifier: "sectionHeader")
         subMenuTable.delegate = self
         subMenuTable.dataSource = self
+        subMenuTable.estimatedRowHeight = 44
     }
     
     required init?(coder: NSCoder) {
@@ -57,7 +51,6 @@ class CustomCellUITable: UITableViewCell, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected \(indexPath.section)..\(indexPath.row)")
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataArr[section].items.isExpanded ? dataArr[0].cell.count : 0
@@ -111,3 +104,15 @@ class CustomCellUITable: UITableViewCell, UITableViewDelegate, UITableViewDataSo
     }
 }
 
+class AutoSizingTableView: UITableView {
+    override var intrinsicContentSize: CGSize {
+        self.layoutIfNeeded()
+        return self.contentSize
+    }
+    
+    override var contentSize: CGSize {
+        didSet {
+            invalidateIntrinsicContentSize()
+        }
+    }
+}
