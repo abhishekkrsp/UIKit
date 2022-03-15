@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-
-class MyCustomHeader: UITableViewHeaderFooterView {
+        
+class MyCustomHeader: UITableViewHeaderFooterView, UIGestureRecognizerDelegate {
     let title: UILabel = {
         let somelabel = UILabel()
         somelabel.font = UIFont.boldSystemFont(ofSize: 17)
@@ -25,14 +25,23 @@ class MyCustomHeader: UITableViewHeaderFooterView {
     let button: UIButton = {
         let someButton = UIButton()
         someButton.translatesAutoresizingMaskIntoConstraints = false
-        someButton.setImage(UIImage(named: "chevron.down"), for: .normal)
+        someButton.setImage(UIImage(named: "chevron.forward"), for: .normal)
         return someButton
     }()
-    
+    @objc func headerHandler(sender: UITapGestureRecognizer) {
+        print("headerCall")    }
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         setupUI()
         configureContents()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        image.image = nil
+        button.setTitle(nil, for: .normal)
+        title.text = nil
+        print("prepareForReuse")
     }
     
     required init?(coder: NSCoder) {
