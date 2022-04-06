@@ -117,6 +117,8 @@
 		EFF90DDE27D0BEA000BF6151 /* UICatalog */ = {
 			isa = PBXGroup;
 			children = (
+				EF21351227DB15FA00F37580 /* DetailsContentPage.swift */,
+				EF2134D227D9ACDC00F37580 /* subMenu.swift */,
 				EFF90DDF27D0BEA000BF6151 /* AppDelegate.swift */,
 				EFF90DE127D0BEA000BF6151 /* SceneDelegate.swift */,
 				EFF90DE327D0BEA000BF6151 /* MainViewController.swift */,
@@ -127,8 +129,6 @@
 				EFA72D6527D73CCA00CF9B7B /* UIImage+Extension.swift */,
 				EFF90E0F27D0EE6E00BF6151 /* ContentViewController.swift */,
 				EF1E139327D8D29B0082A804 /* CustomCellUITable.swift */,
-				EF2134D227D9ACDC00F37580 /* subMenu.swift */,
-				EF21351227DB15FA00F37580 /* DetailsContentPage.swift */,
 				EFA72D6327D729BA00CF9B7B /* customHeader.swift */,
 				EFF90DE827D0BEA100BF6151 /* Assets.xcassets */,
 				EFF90DEA27D0BEA100BF6151 /* LaunchScreen.storyboard */,

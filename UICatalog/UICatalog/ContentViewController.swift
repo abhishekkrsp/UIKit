@@ -4,11 +4,13 @@
 //
 //  Created by Abhishek Kumar on 03/03/22.
 //
+// 4 call
+// begin update and end update
 
 import UIKit
 
 class ContentViewController: UIViewController, MyUIProtocol {
-    
+
     var contents = DetailsContentPage()
     let contentTableView : UITableView = {
         let tableView = UITableView()
@@ -18,7 +20,7 @@ class ContentViewController: UIViewController, MyUIProtocol {
     
     func setupNav() {
         navigationItem.title = "Contents"
-        navigationItem.backButtonTitle = "Back"
+        navigationItem.backBarButtonItem?.title = "Back"
     }
     
     
@@ -50,13 +52,11 @@ class ContentViewController: UIViewController, MyUIProtocol {
                 forHeaderFooterViewReuseIdentifier: "sectionHeader")
         contentTableView.delegate = self
         contentTableView.dataSource = self
-        
-        contentTableView.rowHeight = UITableView.automaticDimension
-        contentTableView.estimatedRowHeight = 600
-
     }
 
 }
+
+
 
 
 extension ContentViewController: UITableViewDataSource {
@@ -64,14 +64,19 @@ extension ContentViewController: UITableViewDataSource {
         return contents.details.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        print("calling for row\(contents.details[section].items.text)")
         return contents.details[section].items.isExpanded ?
             contents.details[section].cell.count : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if let data = contents.details[indexPath.section].cell[indexPath.row] as? IHeader {
             let cell = contentTableView.dequeueReusableCell(withIdentifier: "subMenu", for: indexPath) as? CustomCellUITable
-            cell?.dataArr = [data]
+            cell?.iHeader = data.items
+            cell?.cellsData = data.cell
+            print(data.items.text)
+            cell?.delegate = self
             return cell ?? UITableViewCell()
         }
         
@@ -89,6 +94,9 @@ extension ContentViewController: UITableViewDataSource {
 }
 
 
+
+
+
 extension ContentViewController: UITableViewDelegate, UIGestureRecognizerDelegate {
     
     @objc func headerHandler(sender: UITapGestureRecognizer) {
@@ -100,7 +108,6 @@ extension ContentViewController: UITableViewDelegate, UIGestureRecognizerDelegat
         section = senderView.tag
         for index in contents.details[section].cell.indices {
             let indexPath = IndexPath(row: index, section: section)
-            print("row-\(index)")
             indexPaths.append(indexPath)
         }
         let isExpanded = contents.details[section].items.isExpanded
@@ -119,14 +126,22 @@ extension ContentViewController: UITableViewDelegate, UIGestureRecognizerDelegat
                        "sectionHeader") as! MyCustomHeader
         view.title.text = contents.details[section].items.text
         view.image.image = UIImage(named: contents.details[section].items.image)
-//        view.isUserInteractionEnabled = true
-//        view.title.addTarget(self, action: #selector(headerHandler), for: .touchUpInside)
-//        view.image.addTarget(self, action: #selector(headerHandler), for: .touchUpInside)
-//        view.button.addTarget(self, action: #selector(headerHandler), for: .touchUpInside)
         view.tag = section
         let tapRecognizer = UITapGestureRecognizer(target: self,action: #selector(self.headerHandler(sender:)))
         tapRecognizer.delegate = self
         view.addGestureRecognizer(tapRecognizer)
         return view
+    }
+}
+
+
+
+
+extension ContentViewController: InnerProtocol {
+    func reloadCell(_ cell: CustomCellUITable) {
+        guard let indexTapped = contentTableView.indexPath(for: cell) else {
+            return
+        }
+        contentTableView.reloadRows(at: [indexTapped], with: .none)
     }
 }

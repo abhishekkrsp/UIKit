@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DetailsContentPage {
+class DetailsContentPage {
     var details: [UHeader]
     init() {
         let searchBarsHeader = Header(image: "Search Bars", text: "Search Bars")
@@ -43,26 +43,41 @@ struct DetailsContentPage {
     }
 }
 
-struct Header {
+class Header {
     var image: String
     var text: String
     var isExpanded: Bool = true
+    init(image: String, text: String) {
+        self.image = image
+        self.text = text
+    }
 }
 
 struct UHeader {
     var items: Header
     var cell: [Any]
 }
-
 struct IHeader {
     var items: Header
     var cell: [Cell]
 }
+
 struct Cell {
     var image: String? = nil
     var text: String
 }
 
-//enum CellType: {
-//    case defaultCell
+
+//struct SingleCell {
+//    var type: CellType
+//    var isExpanded:Bool?
+//    var text: String?
+//    var image: String?
+//
+//}
+//
+//enum CellType {
+//    case cellWithoutImage(text: String)
+//    case cellWithImage(text: String, image: String)
+//    case sectionWithImage(text: String, image: String)
 //}
